@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
-import { NouisliderModule } from 'ng2-nouislider';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
 
@@ -14,16 +13,18 @@ import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { IdentificationComponent } from './identification/identification.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        NgbModule,
-        NouisliderModule,
-        RouterModule,
-        JwBootstrapSwitchNg2Module
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    NgbModule,
+    RouterModule,
+    JwBootstrapSwitchNg2Module,
+    ReactiveFormsModule
+  ],
     declarations: [
         ComponentsComponent,
         BasicelementsComponent,
@@ -32,7 +33,9 @@ import { NgbdModalContent } from './modal/modal.component';
         NucleoiconsComponent,
         NotificationComponent,
         NgbdModalComponent,
-        NgbdModalContent
+        NgbdModalContent,
+        RegistrationComponent,
+        IdentificationComponent
     ],
     entryComponents: [NgbdModalContent],
     exports:[ ComponentsComponent ]

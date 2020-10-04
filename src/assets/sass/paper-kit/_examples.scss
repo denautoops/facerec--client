@@ -161,7 +161,7 @@
 }
 .title-brand{
     max-width: 730px;
-    margin: 0 auto;
+    margin: -300px auto;
     position: relative;
     text-align: center;
     color: #FFFFFF;
@@ -178,6 +178,13 @@
         margin-top: 10px;
         right: -15px;
     }
+}
+
+.main-buttons {
+  display: block;
+  position: relative;
+  text-align: center;
+  top: 450px;
 }
 
 .presentation-title{

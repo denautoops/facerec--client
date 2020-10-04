@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+    <div class="filter"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+          <div class="card card-register">
+            <form class="register-form">
+              <label>First Name</label>
+              <div class="input-group form-group-no-border">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-single-02"></i>
+                  </span>
+                </div>
+
+                <input type="text" class="form-control" placeholder="First Name" [formControl]="firstName">
+              </div>
+
+              <label>Last Name</label>
+              <div class="input-group form-group-no-border">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-single-02"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Last Name" [formControl]="lastName">
+              </div>
+
+              <label>Photo</label>
+              <div class="input-group form-group-no-border" >
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-camera-compact"></i>
+                  </span>
+                </div>
+                <input type="file" accept="image/*" class="form-control" placeholder="Photo" (change)="onFileSelected($event)">
+              </div>
+              <button class="btn btn-danger btn-block btn-round" href="#" (click)="onRegistration()">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
