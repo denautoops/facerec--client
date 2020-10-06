@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
@@ -14,7 +13,8 @@ import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { IdentificationComponent } from './identification/identification.component';
+import {IdentificationComponent, NgbdModalIdentificationContent} from './identification/identification.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
@@ -35,9 +35,10 @@ import { IdentificationComponent } from './identification/identification.compone
         NgbdModalComponent,
         NgbdModalContent,
         RegistrationComponent,
-        IdentificationComponent
+        IdentificationComponent,
+        NgbdModalIdentificationContent
     ],
     entryComponents: [NgbdModalContent],
-    exports:[ ComponentsComponent ]
+    exports: [ ComponentsComponent ]
 })
 export class ComponentsModule { }
